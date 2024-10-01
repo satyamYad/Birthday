@@ -1,0 +1,107 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  text-align: center;
+}
+
+.welcome {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* Button styles */
+.btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff4b4b;
+}
+
+/* Cake Animation */
+.cake {
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation: bounce 2s infinite;
+}
+
+.base {
+  background-color: #ff6b6b;
+  width: 100%;
+  height: 60%;
+  border-radius: 0 0 50% 50%;
+}
+
+.frosting {
+  background-color: #f3e5ab;
+  height: 20%;
+  width: 100%;
+  border-radius: 50% 50% 0 0;
+  position: relative;
+  top: -20px;
+}
+
+.candle {
+  width: 5px;
+  height: 40px;
+  background: white;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flicker 0.2s infinite alternate;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    transform: rotate(-5deg);
+  }
+  100% {
+    opacity: 0.8;
+    transform: rotate(5deg);
+  }
+}
